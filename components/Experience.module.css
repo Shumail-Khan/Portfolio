@@ -1,0 +1,94 @@
+.titleNumber {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  font-weight: normal;
+}
+
+.experienceList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experienceItem {
+  display: flex;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.timeline {
+  width: 2px;
+  background-color: var(--border-color);
+  margin-right: 2rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--background);
+  border: 2px solid var(--accent);
+}
+
+.content {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+.jobTitle {
+  font-size: 1.25rem;
+  color: var(--foreground);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  color: var(--accent);
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.descriptionList {
+  list-style: none;
+  padding: 0;
+}
+
+.descriptionList li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.descriptionList li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .experienceItem {
+    flex-direction: column;
+  }
+  
+  .timeline {
+    display: none;
+  }
+  
+  .content {
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+  }
+}

@@ -1,0 +1,70 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem; /* Account for navbar */
+}
+
+.content {
+  max-width: 800px;
+}
+
+.greeting {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.name {
+  font-size: clamp(40px, 8vw, 80px);
+  font-weight: 700;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  animation-delay: 0.1s;
+}
+
+.role {
+  font-size: clamp(30px, 6vw, 60px);
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  animation-delay: 0.2s;
+}
+
+.description {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  animation-delay: 0.3s;
+}
+
+.description strong {
+  color: var(--foreground);
+}
+
+.actions {
+  animation-delay: 0.4s;
+}
+
+.button {
+  display: inline-block;
+  color: var(--accent);
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 1rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: rgba(56, 189, 248, 0.1);
+  transform: translateY(-2px);
+}
