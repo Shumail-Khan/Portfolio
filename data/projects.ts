@@ -143,7 +143,7 @@ export const projects: Project[] = [
       "Keeping a public marketing site and an internal admin CMS in the same codebase without the admin surface leaking into the public bundle, while supporting rich content editing for non-technical staff.",
     outcome: "Deployed and publicly accessible as the business's live website.",
     github: "https://github.com/Shumail-Khan/Tree-Project",
-    liveDemo: "https://tree-project-orpin.vercel.app/",
+    liveDemo: "https://americantreesexpert.com/",
   },
   {
     slug: "weapon-carrier-detection",
