@@ -1,0 +1,158 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(6, 8, 12, 0.78);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 1.25rem;
+  overflow-y: auto;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  background: var(--bg-raised);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-bottom: 5vh;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-inset);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.closeBtn:hover {
+  color: var(--text);
+  border-color: var(--cyan);
+}
+
+.title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 1rem 0 0.25rem;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  margin-bottom: 1.5rem;
+}
+
+.linkRow {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.linkBtn,
+.linkBtnPrimary {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+}
+
+.linkBtn {
+  border: 1px solid var(--line-strong);
+  color: var(--text-muted);
+}
+
+.linkBtn:hover {
+  color: var(--text);
+  border-color: var(--cyan);
+}
+
+.linkBtnPrimary {
+  background: var(--cyan);
+  color: var(--bg);
+}
+
+.block {
+  border-top: 1px solid var(--line);
+  padding: 1.4rem 0;
+}
+
+.block:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.blockTitle {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+  margin-bottom: 0.65rem;
+}
+
+.blockText {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 65ch;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.featureList li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.featureList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 1px;
+  background: var(--amber);
+}
+
+.techGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.techGrid li {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+}
+
+.note {
+  margin-top: 1.5rem;
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: 1.75rem;
+  }
+}

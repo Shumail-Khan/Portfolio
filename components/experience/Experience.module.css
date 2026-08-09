@@ -1,0 +1,91 @@
+.list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 2rem;
+}
+
+.list::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: linear-gradient(var(--line-strong), transparent 95%);
+}
+
+.item {
+  position: relative;
+  display: block;
+}
+
+.railDot {
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 1px var(--line-strong);
+}
+
+.railDot.systems {
+  background: var(--amber);
+  box-shadow: 0 0 0 4px var(--amber-soft);
+}
+
+.railDot.ai {
+  background: var(--cyan);
+  box-shadow: 0 0 0 4px var(--cyan-soft);
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+.title {
+  font-size: 1.15rem;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+}
+
+.company {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.9rem;
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-width: 62ch;
+}
+
+.points li {
+  position: relative;
+  padding-left: 1.1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 1px;
+  background: var(--text-faint);
+}

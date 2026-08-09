@@ -1,0 +1,35 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+}
+
+.card {
+  background: var(--bg-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.date {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--amber);
+}
+
+.degree {
+  font-size: 1.05rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.institution {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.detail {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+}

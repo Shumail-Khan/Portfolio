@@ -1,0 +1,128 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.content {
+  max-width: 640px;
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 3px var(--cyan-soft);
+}
+
+.name {
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+.role {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  margin-bottom: 1.6rem;
+}
+
+.roleAmber {
+  color: var(--amber);
+}
+
+.roleCyan {
+  color: var(--cyan);
+}
+
+.roleJoin {
+  color: var(--text-faint);
+}
+
+.tagline {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 52ch;
+  margin-bottom: 2.4rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.primaryBtn {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--bg);
+  background: linear-gradient(120deg, var(--amber), var(--cyan));
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -12px var(--cyan-line);
+}
+
+.secondaryBtn {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  border: 1px solid var(--line-strong);
+  padding: 0.75rem 1.3rem;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.secondaryBtn:hover {
+  border-color: var(--cyan);
+  color: var(--text);
+}
+
+.visual {
+  filter: drop-shadow(0 20px 60px rgba(79, 216, 196, 0.08));
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    order: -1;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .actions {
+    justify-content: flex-start;
+  }
+}

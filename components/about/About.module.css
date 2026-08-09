@@ -1,0 +1,52 @@
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.text p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 58ch;
+  margin-bottom: 1.15rem;
+}
+
+.honors {
+  font-family: var(--font-mono);
+  font-size: 0.85rem !important;
+  color: var(--amber) !important;
+  margin-top: 1.6rem !important;
+}
+
+.photoWrap {
+  justify-self: center;
+  width: 100%;
+  max-width: 300px;
+}
+
+.photoFrame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 6px;
+  background: linear-gradient(155deg, var(--amber-soft), var(--cyan-soft));
+  border: 1px solid var(--line-strong);
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius-lg) - 4px);
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+
+  .photoWrap {
+    max-width: 220px;
+    order: -1;
+  }
+}

@@ -1,13 +1,54 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code } from "next/font/google";
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
-const firaCode = Fira_Code({ subsets: ["latin"], variable: "--font-mono" });
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700"],
+});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jbMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jbmono",
+  weight: ["400", "500"],
+});
+
+const title = "Shumail Khan — Full-Stack Developer & AI/ML Engineer";
+const description =
+  "Portfolio of Shumail Khan: full-stack MERN engineering and AI/ML — computer vision, NLP, and predictive analytics — with production-deployed projects.";
 
 export const metadata: Metadata = {
-  title: "Shumail Khan | Portfolio",
-  description: "Portfolio of Shumail Khan, Full Stack Developer and AI Enthusiast.",
+  metadataBase: new URL("https://shumail-khan.netlify.app"),
+  title,
+  description,
+  keywords: [
+    "Shumail Khan",
+    "Full Stack Developer",
+    "AI Engineer",
+    "Machine Learning Engineer",
+    "MERN Stack",
+    "Computer Vision",
+    "NLP",
+    "React Developer",
+    "Python Developer",
+  ],
+  authors: [{ name: "Shumail Khan" }],
+  openGraph: {
+    title,
+    description,
+    url: "https://shumail-khan.netlify.app",
+    siteName: "Shumail Khan — Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -16,7 +57,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${firaCode.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} ${inter.variable} ${jbMono.variable}`}
+      suppressHydrationWarning
+    >
       <body suppressHydrationWarning>{children}</body>
     </html>
   );
