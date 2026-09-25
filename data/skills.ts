@@ -11,9 +11,9 @@ export const skillGroups: SkillGroup[] = [
     items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS", "SQL"],
   },
   {
-    label: "Frontend",
+    label: "Frontend & Mobile",
     eyebrow: "ui",
-    items: ["React", "Next.js", "Redux Toolkit", "Tailwind CSS", "Responsive Design"],
+    items: ["React", "React Native", "Next.js", "Expo", "Redux Toolkit", "Tailwind CSS"],
   },
   {
     label: "Backend",

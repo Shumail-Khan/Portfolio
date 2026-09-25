@@ -77,7 +77,27 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               )}
               {project.liveDemo && (
                 <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className={styles.linkBtnPrimary}>
-                  Live demo ↗
+                  {project.mobileApp || project.apkDownload ? "Live Web App ↗" : "Live demo ↗"}
+                </a>
+              )}
+              {project.apkDownload && (
+                <a
+                  href={project.apkDownload}
+                  download
+                  className={styles.linkBtn}
+                  title="Download Android APK directly"
+                >
+                  Download APK (Android) ↓
+                </a>
+              )}
+              {project.mobileApp && (
+                <a href={project.mobileApp} target="_blank" rel="noopener noreferrer" className={styles.linkBtn}>
+                  Mobile Build (Expo EAS) ↗
+                </a>
+              )}
+              {project.expoUrl && (
+                <a href={project.expoUrl} target="_blank" rel="noopener noreferrer" className={styles.linkBtn}>
+                  Expo Project ↗
                 </a>
               )}
             </div>

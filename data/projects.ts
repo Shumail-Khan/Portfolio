@@ -20,10 +20,61 @@ export type Project = {
   outcome?: string;
   github?: string;
   liveDemo?: string;
+  mobileApp?: string;
+  apkDownload?: string;
+  expoUrl?: string;
   note?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: "pnap-mis",
+    title: "PNAP MIS",
+    tagline: "Party Management Information System (MERN & React Native)",
+    category: "Full Stack",
+    featured: true,
+    description:
+      "A comprehensive, production-deployed enterprise Management Information System (MIS) for Pakhtunkhwa National Awami Party (پښتونخوا نېشنل عوامي پارټي), pairing a multi-tier MERN web portal with a companion React Native / Redux mobile app distributed via Expo EAS.",
+    problem:
+      "Coordinating thousands of political party members, multi-tier organizational assemblies (districts, tehsils, union councils), financial accounts, and cabinet records via manual spreadsheets caused fragmented reporting, data silos, and administrative delays.",
+    solution:
+      "Engineered a centralized digital MIS platform: a secure web administration portal for party leadership to manage memberships, assemblies, finances, and role-based permissions, paired with an Expo React Native mobile app with Redux state management for field workers and members to access party data on the go.",
+    features: [
+      "Full-lifecycle member registration, digital ID generation, and record management",
+      "Hierarchical unit administration spanning provincial, district, tehsil, and local units",
+      "Assembly and cabinet governance tracking with organizational role assignments",
+      "Financial ledger tracking membership dues, contributions, and account balances",
+      "JWT-authenticated Role-Based Access Control (RBAC) with granular admin permissions",
+      "Companion cross-platform mobile application built with React Native and Redux",
+      "Automated production deployment via Render (Web) and Expo Application Services (Mobile)",
+    ],
+    technologies: [
+      "React",
+      "React Native",
+      "Expo",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "REST APIs",
+      "JWT",
+      "Vite",
+      "Render",
+    ],
+    architecture:
+      "A centralized Node.js/Express REST API backed by MongoDB Atlas powers both the React/Vite admin dashboard and the React Native mobile application. State is coordinated on mobile via Redux Toolkit, with shared JWT authentication enforcing consistent role-based access across both web and mobile clients.",
+    challenges:
+      "Designing a scalable relational-style data schema in MongoDB to represent complex political hierarchies (multi-level assemblies and cabinets) while ensuring seamless synchronization, responsive UI, and offline-resilient state across web and mobile clients.",
+    outcome:
+      "Fully deployed to production with active web operations on Render and mobile builds delivered via Expo Application Services (EAS).",
+    liveDemo: "https://pnap-mis.onrender.com/",
+    mobileApp:
+      "https://expo.dev/accounts/shumail_khan/projects/pnap-mis/builds/7f1afe8f-9846-4aa2-a75d-30e0cf48988e",
+    apkDownload: "/downloads/pnap-mis.apk",
+    expoUrl:
+      "https://expo.dev/accounts/shumail_khan/projects/pnap-mis?tab=activity",
+  },
   {
     slug: "stockpilot",
     title: "StockPilot",
